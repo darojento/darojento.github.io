@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>키움 종목분석</title>
+<meta name="description" content="장 마감 후 확정 일봉으로 사용자가 정한 조건을 검색하고 보고서를 만드는 개인용 Android 앱">
+<style>
+:root{--primary:#5B4BC4;--primary-c:#E8E4FF;--on-primary-c:#1F1660;--bg:#F5F6F8;--surface:#FFFFFF;--text:#191C20;--sub:#5D646E;--outline:#D5D9DF;--divider:#ECEEF1;--warn-bg:#FFF4D6;--warn:#7A5300}
+@media (prefers-color-scheme:dark){:root{--primary:#B8ADFF;--primary-c:#3B3190;--on-primary-c:#E8E4FF;--bg:#111318;--surface:#1A1D23;--text:#E4E6EA;--sub:#A0A7B1;--outline:#3B4049;--divider:#262A31;--warn-bg:#3A2E10;--warn:#FFD98A}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;line-height:1.7;font-size:16px;word-break:keep-all;overflow-wrap:break-word}
+.wrap{max-width:760px;margin:0 auto;padding:32px 16px 48px}
+header .mark{display:inline-block;width:44px;height:44px;border-radius:12px;background:var(--primary);color:#fff;font-weight:700;font-size:22px;line-height:44px;text-align:center}
+h1{font-size:28px;margin:12px 0 4px}
+.lead{color:var(--sub);margin:0 0 24px}
+.card{background:var(--surface);border:1px solid var(--divider);border-radius:16px;padding:20px;margin:0 0 16px}
+h2{font-size:18px;margin:0 0 10px}
+ul{margin:0;padding-left:20px}
+li{margin:4px 0}
+.chip{display:inline-block;background:var(--primary-c);color:var(--on-primary-c);border-radius:999px;padding:2px 12px;font-size:13px;margin:0 6px 6px 0}
+.notice{background:var(--warn-bg);color:var(--warn);border-radius:12px;padding:14px 16px;margin:0 0 16px}
+.notice strong{display:block;margin-bottom:4px}
+footer{border-top:1px solid var(--outline);margin-top:32px;padding-top:16px;color:var(--sub);font-size:14px}
+footer nav a{margin-right:16px}
+a{color:var(--primary)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <span class="mark" aria-hidden="true">K</span>
+  <h1>키움 종목분석</h1>
+  <p class="lead">장 마감 후 확정된 일봉으로, 내가 정한 조건에 맞는 종목을 찾아 보고서로 정리하는 개인용 Android 앱입니다.</p>
+  <span class="chip">개인용</span><span class="chip">무료</span><span class="chip">주문 기능 없음</span>
+</header>
+
+<div class="notice" role="note">
+  <strong>투자 권유가 아닙니다</strong>
+  이 앱은 정보를 정리해 보여 줄 뿐이며 매수·매도를 권하지 않습니다. 투자 판단과 그 결과의 책임은 사용자 본인에게 있습니다.
+</div>
+
+<section class="card">
+  <h2>주요 기능</h2>
+  <ul>
+    <li><b>장 마감 후 분석</b>: 사용자 본인의 키움 REST API 키로 시세(종목 정보·일봉)를 조회하고, 장 마감 후 확정된 일봉만 사용합니다.</li>
+    <li><b>조건 검색</b>: 사용자가 직접 정한 조건(전략)으로 종목을 걸러 냅니다.</li>
+    <li><b>보고서 생성</b>: 검색 결과를 날짜별 HTML 보고서로 만들어 휴대폰에 저장하고 앱 안에서 봅니다.</li>
+    <li><b>Google Drive 백업</b>: 사용자가 연결한 경우에만, 보고서와 백업 파일을 사용자 본인 Google Drive의 「키움종목분석」 폴더에 올립니다. 앱이 만든 파일에만 접근하는 <code>drive.file</code> 권한만 사용합니다.</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>하지 않는 것</h2>
+  <ul>
+    <li>매매 주문, 계좌 조회, 잔고 조회 기능이 없습니다.</li>
+    <li>종목 추천이나 투자 자문을 하지 않습니다.</li>
+    <li>광고, 사용 통계 수집, 오류 보고(크래시 수집) 도구를 넣지 않았습니다.</li>
+    <li>개발자 서버가 없습니다. 데이터는 휴대폰과 사용자 본인 Drive에만 있습니다.</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>누구를 위한 앱인가요</h2>
+  <p style="margin:0">개발자 본인이 자기 휴대폰에서 쓰기 위해 만든 개인용 앱이며, 앱 마켓에 배포하지 않습니다. 이 앱은 키움증권 및 Google과 제휴하거나 그들로부터 승인받은 앱이 아닙니다.</p>
+</section>
+
+<footer>
+  <nav><a href="privacy.html">개인정보처리방침</a><a href="terms.html">서비스 약관</a></nav>
+  <p>문의: <a href="mailto:{{darojento@gmail.com}}">{{darojento@gmail.com}}</a></p>
+</footer>
+</div>
+</body>
+</html>
